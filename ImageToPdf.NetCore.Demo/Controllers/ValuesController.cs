@@ -13,7 +13,7 @@ namespace ImageToPdf.NetCore.Demo.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            byte[] pdfBytes = ImageToPdfConvertor.Convert(@"C:\Users\athul\source\repos\ImageToPdf.NetCore\ImageToPdf.NetCore.Demo\Images\sample1.jpg");
+            byte[] pdfBytes = ImageToPdfConvertor.Convert(@"C:\Users\athul\source\repos\ImageToPdf.NetCore\ImageToPdf.NetCore.Demo\Images\sample.jpg");
             return File(pdfBytes, "application/pdf");
         }
     }
