@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageToPdf.NetCore", "ImageToPdf.NetCore\ImageToPdf.NetCore.csproj", "{552CBFC1-98E6-4BAF-BA5E-6A997ADA9EBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageToPdf.NetCore.Demo", "ImageToPdf.NetCore.Demo\ImageToPdf.NetCore.Demo.csproj", "{B32573D2-8BFD-4BAA-A339-524FF6F51885}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{552CBFC1-98E6-4BAF-BA5E-6A997ADA9EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{552CBFC1-98E6-4BAF-BA5E-6A997ADA9EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{552CBFC1-98E6-4BAF-BA5E-6A997ADA9EBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B32573D2-8BFD-4BAA-A339-524FF6F51885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B32573D2-8BFD-4BAA-A339-524FF6F51885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B32573D2-8BFD-4BAA-A339-524FF6F51885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B32573D2-8BFD-4BAA-A339-524FF6F51885}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
