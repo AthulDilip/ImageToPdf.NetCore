@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Company>Fantacode</Company>
+    <Authors>Athul Dilip, Farshan Ahamed</Authors>
+    <Description>ImageToPdf.NetCore provides a simple way of converting Image to PDF for Asp.NetCore</Description>
   </PropertyGroup>
 
   <ItemGroup>
