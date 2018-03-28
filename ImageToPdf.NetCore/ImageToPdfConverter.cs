@@ -11,7 +11,7 @@ namespace ImageToPdf.NetCore
 {
     public class ImageToPdfConvertor
     {
-        private const string _wkhtmlPath = @"C:\Users\athul\source\repos\ImageToPdf.NetCore\ImageToPdf.NetCore\Wkhtml";
+        private const string _wkhtmlPath = @"\ImageToPdf.NetCore\ImageToPdf.NetCore\Wkhtml";
         private const string _wkhtmlExe = "wkhtmltopdf.exe";
         
         /// <summary>
@@ -22,6 +22,8 @@ namespace ImageToPdf.NetCore
         public static byte[] Convert(string imagePath, string switches="")
         {
             // Convert Image path to html
+            string fullWkhtmlpath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName
+                + _wkhtmlPath;
             string html = ImagePathToHtml(imagePath);
 
             // If switches are not given take default switches
@@ -50,13 +52,13 @@ namespace ImageToPdf.NetCore
             {
                 StartInfo = new ProcessStartInfo
                 {
-                    FileName = Path.Combine(_wkhtmlPath, _wkhtmlExe),
+                    FileName = Path.Combine(fullWkhtmlpath, _wkhtmlExe),
                     Arguments = switches,
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,
                     RedirectStandardInput = true,
-                    WorkingDirectory = _wkhtmlPath,
+                    WorkingDirectory = fullWkhtmlpath,
                     CreateNoWindow = true
                 }
             };
