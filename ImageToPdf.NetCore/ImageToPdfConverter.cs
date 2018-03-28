@@ -1,9 +1,7 @@
-﻿using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
-using SixLabors.ImageSharp.Processing;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Text;
 
@@ -31,7 +29,7 @@ namespace ImageToPdf.NetCore
             {
                 try
                 {
-                    using (Image<Rgba32> image = Image.Load(imagePath))
+                    using (var image = new Bitmap(System.Drawing.Image.FromFile(imagePath)))
                     {
                         if (image != null)
                             switches = $"-T 0 -B 0 -L 0 -R 0 --page-width {image.Width}pt --page-height {image.Height}pt";
