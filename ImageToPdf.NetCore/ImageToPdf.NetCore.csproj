@@ -5,7 +5,7 @@
     <Company>Fantacode</Company>
     <Authors>Athul Dilip, Farshan Ahamed</Authors>
     <Description>ImageToPdf.NetCore provides a simple way of converting Image to PDF for Asp.NetCore</Description>
-    <Version>1.0.12</Version>
+    <Version>2.1.0</Version>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
