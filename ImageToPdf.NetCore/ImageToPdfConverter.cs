@@ -20,7 +20,7 @@ namespace ImageToPdf.NetCore
         public static byte[] Convert(string imagePath, string switches="")
         {
             // Get the path
-            string fullWkhtmlDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string fullWkhtmlDir = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);
             fullWkhtmlDir = Path.Combine(fullWkhtmlDir, "Wkhtml");
 
             // Convert Image path to html
@@ -37,7 +37,7 @@ namespace ImageToPdf.NetCore
                             switches = $"-T 0 -B 0 -L 0 -R 0 --page-width {image.Width}pt --page-height {image.Height}pt";
                     }
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                 } 
             }
@@ -52,7 +52,7 @@ namespace ImageToPdf.NetCore
             {
                 StartInfo = new ProcessStartInfo
                 {
-                    FileName = Path.Combine(fullWkhtmlDir, _wkhtmlExe),
+                    FileName = Path.Combine(fullWkhtmlDir,_wkhtmlExe),
                     Arguments = switches,
                     UseShellExecute = false,
                     RedirectStandardOutput = true,

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>ImageToPdf.NetCore</id>
+    <version>1.0.6</version>
+    <authors>Athul Dilip, Farshan Ahamed</authors>
+    <owners>Athul Dilip, Farshan Ahamed</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ImageToPdf.NetCore provides a simple way of converting Image to PDF for Asp.NetCore</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.1">
+        <dependency id="CoreCompat.System.Drawing" version="1.0.0-beta006" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <contentFiles>
+      <files include="any/netcoreapp2.1/Wkhtml/wkhtmltopdf.exe" buildAction="Content" copyToOutput="true" />
+    </contentFiles>
+  </metadata>
+</package>
