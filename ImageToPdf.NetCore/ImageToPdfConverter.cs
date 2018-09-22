@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace ImageToPdf.NetCore
@@ -37,9 +38,25 @@ namespace ImageToPdf.NetCore
                             switches = $"-T 0 -B 0 -L 0 -R 0 --page-width {image.Width}pt --page-height {image.Height}pt";
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                 } 
+            }
+
+            string fileName = _wkhtmlExe;
+
+            //Getting the file based on the device platform
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                fileName += @".exe";
+            }
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            {
+                fileName += @".dpkg";
+            }
+            else
+            {
+                throw new PlatformNotSupportedException("The current is not included in the supported platforms.");
             }
 
             // switches:
